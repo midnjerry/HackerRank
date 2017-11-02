@@ -1,19 +1,9 @@
-package jerry.balderas.arrayManipulation;
+package jerry.balderas.dataStructures.arrays.arrayManipulation;
 
-import static org.junit.Assert.*;
-
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
+
+import jerry.balderas.dataStructures.arrays.arrayManipulation.Solution;
 
 public class SolutionTest {
 

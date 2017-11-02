@@ -1,9 +1,12 @@
-package jerry.balderas.fightingpits;
+package jerry.balderas.algorithms.greedy.fightingPits;
 
 import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+
+import jerry.balderas.algorithms.greedy.fightingPits.Solution;
+import jerry.balderas.algorithms.greedy.fightingPits.Team;
 
 public class TeamTest {
 

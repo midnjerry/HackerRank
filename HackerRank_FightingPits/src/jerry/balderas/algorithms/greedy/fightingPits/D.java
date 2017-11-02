@@ -1,4 +1,4 @@
-package jerry.balderas.fightingpits;
+package jerry.balderas.algorithms.greedy.fightingPits;
 
 import java.io.BufferedReader;
 import java.io.IOException;

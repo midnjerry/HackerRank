@@ -1,4 +1,4 @@
-package jerry.balderas.fightingpits;
+package jerry.balderas.algorithms.greedy.fightingPits;
 
 import static org.junit.Assert.*;
 
@@ -14,6 +14,8 @@ import java.nio.file.Paths;
 import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
+
+import jerry.balderas.algorithms.greedy.fightingPits.Solution2;
 
 public class SolutionTest {
 

@@ -1,4 +1,4 @@
-package jerry.balderas.arrayManipulation;
+package jerry.balderas.dataStructures.arrays.arrayManipulation;
 
 class Range {
 	int low;

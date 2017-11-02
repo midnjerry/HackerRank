@@ -1,4 +1,4 @@
-package jerry.balderas.arrayManipulation;
+package jerry.balderas.dataStructures.arrays.arrayManipulation;
 
 import java.util.HashMap;
 import java.util.TreeSet;

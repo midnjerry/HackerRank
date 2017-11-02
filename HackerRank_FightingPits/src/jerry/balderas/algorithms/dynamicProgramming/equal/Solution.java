@@ -3,71 +3,45 @@ package jerry.balderas.algorithms.dynamicProgramming.equal;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/*
+ * https://www.hackerrank.com/challenges/equal/problem
+ * 
+ * You must find minimum number of operations needed to make all elements equal.  You are allowed to subtract 1, 2, or 5 from each
+ * element.  There are three possible solutions to explore.  Trying to match all elements with the lowest element.  For the
+ * majority of cases, this works.  however.  In cases like 1 5 5 5 - subtracting 1 first element = 0 5 5 5 allowing subtraction
+ * of 5 from the other elements -> for a total of 4 OPS in lieu of 6 (subtracting 2 twice from each 5).
+ * 
+ * Executing an op on the first element is simulated by negOneOP and negTwoOP.  We don't need to calculate negFiveOP.
+ */
 public class Solution {
 
-	private static int getMinCombos(int iteration, int[] num) {
-		int operations = 0;
-		int diff = 0;
+	public static int getMinCombos(int[] num) {
+		Arrays.sort(num);
+		int zeroOP = 0;
+		int negOneOP = 1;
+		int negTwoOP = 1;
+		int base = num[0];
 		for (int i = 1; i < num.length; i++) {
-
-			diff = num[i] + diff - num[i - 1];
-			if (diff == 3 || diff == 4) {
-				// specialCases
-				int streak = getStreak(i, num);
-				if (streak > 1) {
-					diff += streak * 5 + (5 - diff);
-					operations += streak + 1;
-					i += streak - 1;
-				} else {
-					operations += getOps(diff);
-				}
-			} else {
-				operations += getOps(diff);
-			}
+			zeroOP += getOps(num[i] - base);
+			negOneOP += getOps(num[i] - base + 1);
+			negTwoOP += getOps(num[i] - base + 2);
 		}
-		return operations;
+		return Math.min(Math.min(zeroOP, negOneOP), negTwoOP);
 	}
 
-	private static int getStreak(int start, int[] num) {
-		int streak = 1;
-		int base = num[start];
-		for (int i = start + 1; i < num.length; i++) {
-			if (base == num[i])
-				streak++;
-			else
-				break;
-		}
-		return streak;
-	}
+	public static int getOps(int diff) {
 
-	private static int getOps(int diff) {
 		int count = 0;
-		while (diff > 0) {
-			if (diff >= 5) {
-				diff -= 5;
-			} else if (diff >= 2) {
-				diff -= 2;
-			} else
-				diff--;
-			count++;
-		}
+		int total = diff;
+
+		count += total / 5;
+		total = total % 5;
+
+		count += total / 2;
+		total = total % 2;
+
+		count += total;
 		return count;
-	}
-
-	/*
-	 * private static int getMinCombos(int iteration, int[] num) { int
-	 * operations = 0; for (int i = 1; i < num.length; i++) { while (num[i] >
-	 * num[i - 1]) { int diff = num[i] - num[i - 1]; if (diff >= 5) doOP(num, i,
-	 * 5); else if (diff >= 2) doOP(num, i, 2); else doOP(num, i, 1);
-	 * operations++; } } return operations; }
-	 */
-
-	private static void doOP(int[] num, int indexToSkip, int value) {
-		for (int i = 0; i < num.length; i++) {
-			if (i != indexToSkip) {
-				num[i] += value;
-			}
-		}
 
 	}
 
@@ -80,8 +54,7 @@ public class Solution {
 			for (int j = 0; j < n; j++) {
 				chocolates[j] = in.nextInt();
 			}
-			Arrays.sort(chocolates);
-			System.out.println(getMinCombos(0, chocolates));
+			System.out.println(getMinCombos(chocolates));
 		}
 		in.close();
 	}

@@ -1,9 +1,11 @@
-package jerry.balderas.theCoinChangeProblem;
+package jerry.balderas.algorithms.dynamicProgramming.theCoinChangeProblem;
 
 import static org.junit.Assert.*;
 import java.util.Arrays;
 import java.util.HashMap;
 import org.junit.Test;
+
+import jerry.balderas.algorithms.dynamicProgramming.theCoinChangeProblem.Solution;
 
 public class SolutionTest {
 

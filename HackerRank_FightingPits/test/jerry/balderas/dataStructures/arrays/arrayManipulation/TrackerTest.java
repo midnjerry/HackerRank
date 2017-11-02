@@ -1,8 +1,11 @@
-package jerry.balderas.arrayManipulation;
+package jerry.balderas.dataStructures.arrays.arrayManipulation;
 
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
+
+import jerry.balderas.dataStructures.arrays.arrayManipulation.Range;
+import jerry.balderas.dataStructures.arrays.arrayManipulation.Tracker;
 
 public class TrackerTest {
 	private Tracker tracker;

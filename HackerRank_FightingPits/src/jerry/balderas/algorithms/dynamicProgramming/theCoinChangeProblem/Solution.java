@@ -1,4 +1,4 @@
-package jerry.balderas.theCoinChangeProblem;
+package jerry.balderas.algorithms.dynamicProgramming.theCoinChangeProblem;
 
 import java.util.Arrays;
 import java.util.HashMap;
