@@ -14,13 +14,22 @@ public class Solution {
 			int a = in.nextInt();
 			int b = in.nextInt();
 			int k = in.nextInt();
-
-			sumDiff[a] += k;
-			if (b < n) {
-				sumDiff[b + 1] -= k;
-			}
+			addRange(n, sumDiff, a, b, k);
 		}
 
+		System.out.println(getMaxSum(sumDiff));
+		in.close();
+
+	}
+
+	static void addRange(int n, int[] sumDiff, int a, int b, int k) {
+		sumDiff[a] += k;
+		if (b < n) {
+			sumDiff[b + 1] -= k;
+		}
+	}
+
+	public static long getMaxSum(int[] sumDiff) {
 		long max = 0;
 		long sum = 0;
 		for (int i = 0; i < sumDiff.length; i++) {
@@ -29,9 +38,6 @@ public class Solution {
 				max = sum;
 			}
 		}
-
-		System.out.println(max);
-		in.close();
-
+		return max;
 	}
 }
