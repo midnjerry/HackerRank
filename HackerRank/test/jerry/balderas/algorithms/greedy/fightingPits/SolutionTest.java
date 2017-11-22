@@ -1,6 +1,6 @@
 package jerry.balderas.algorithms.greedy.fightingPits;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
@@ -12,10 +12,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
-
-import jerry.balderas.algorithms.greedy.fightingPits.Solution2;
 
 public class SolutionTest {
 
@@ -68,12 +67,12 @@ public class SolutionTest {
 
 	@Test
 	public void SampleTest0() {
-		testSolution("Test0", "./FightingPits/input00.txt", "./FightingPits/output00.txt");
+		testSolution("Test0", "./HackerRank/FightingPits/input00.txt", "./HackerRank/FightingPits/output00.txt");
 	}
 
 	@Test
 	public void SampleTest5() {
-		testSolution("Test5", "./FightingPits/input05.txt", "./FightingPits/output05.txt");
+		testSolution("Test5", "./HackerRank/FightingPits/input05.txt", "./HackerRank/FightingPits/output05.txt");
 	}
 
 }
