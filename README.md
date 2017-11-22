@@ -17,6 +17,7 @@
 | [Project Euler #6: Sum square difference](https://www.hackerrank.com/contests/projecteuler/challenges/euler006)                        |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0006.java)                                                   |
 | [Project Euler #7: 10001st prime](https://www.hackerrank.com/contests/projecteuler/challenges/euler007)                                |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0007.java)                                                   |
 | [Project Euler #8: Largest product in a series](https://www.hackerrank.com/contests/projecteuler/challenges/euler008)                  |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0008.java)                                                   |
+| [Project Euler #9: Special Pythagorean triplet](https://www.hackerrank.com/contests/projecteuler/challenges/euler009)                  |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0009.java)                                                   |
 
 ## Algorithms
 
