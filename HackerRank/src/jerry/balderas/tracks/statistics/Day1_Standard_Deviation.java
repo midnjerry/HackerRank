@@ -51,6 +51,9 @@ public class Day1_Standard_Deviation {
 		return stdDev;
 	}
 
+	/*
+	 * Cool one pass trick but is susceptible to Rounding Error
+	 */
 	static double getStandardDeviationBigDecimal(int[] numbers) {
 		BigDecimal stdDeviation = BigDecimal.ZERO;
 
@@ -69,6 +72,9 @@ public class Day1_Standard_Deviation {
 		return Math.sqrt(stdDeviation.doubleValue());
 	}
 
+	/*
+	 * Cool one pass trick but is susceptible to Rounding Error
+	 */
 	static double getStandardDeviationDouble(int[] numbers) {
 
 		double stdDev = 0;
