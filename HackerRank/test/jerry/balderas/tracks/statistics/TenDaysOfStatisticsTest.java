@@ -2,11 +2,13 @@ package jerry.balderas.tracks.statistics;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Arrays;
+
 import org.junit.Test;
 
 public class TenDaysOfStatisticsTest {
 
-	private final double EPSILON = 0.1;
+	private final double EPSILON = 0.05;
 
 	@Test
 	public void TestMean() {
@@ -38,5 +40,39 @@ public class TenDaysOfStatisticsTest {
 
 	@Test
 	public void TestWeightedMean() {
+		int[] numbers = new int[] { 10, 20, 30, 30, 50, 60, 70 };
+		int[] weights = new int[] { 5, 5, 5, 5, 5, 5, 5 };
+		assertEquals(38.6, Day0_Weighted_Mean.getWeightedMean(numbers, weights), EPSILON);
+
+		numbers = new int[] { 10, 40, 30, 50, 20 };
+		weights = new int[] { 1, 2, 3, 4, 5 };
+		assertEquals(32.0, Day0_Weighted_Mean.getWeightedMean(numbers, weights), EPSILON);
+
+		assertEquals(0.0, Day0_Weighted_Mean.getWeightedMean(new int[] {}, new int[] {}), EPSILON);
+	}
+
+	@Test
+	public void TestStandardDeviation() {
+		int[] numbers = new int[] { 10, 40, 30, 50, 20 };
+		assertEquals(14.1, Day1_Standard_Deviation.getStandardDeviationBigDecimal(numbers), EPSILON);
+		assertEquals(14.1, Day1_Standard_Deviation.getStandardDeviationDouble(numbers), EPSILON);
+		assertEquals(14.1, Day1_Standard_Deviation.getStandardDeviationBruteForce(numbers), EPSILON);
+		assertEquals(14.1, Day1_Standard_Deviation.getStandardDeviation(numbers), EPSILON);
+
+		int N = 100000;
+		numbers = new int[100];
+		for (int i = 0; i < 100; i++) {
+			numbers[i] = N - i;
+		}
+
+		System.out.println(Arrays.toString(numbers));
+		System.out.println(Day1_Standard_Deviation.getStandardDeviationBigDecimal(numbers));
+		System.out.println(Day1_Standard_Deviation.getStandardDeviationDouble(numbers));
+
+		// WOW. This breaks it.
+		assertEquals(Double.NaN, Day1_Standard_Deviation.getStandardDeviationBigDecimal(numbers), EPSILON);
+		assertEquals(Double.NaN, Day1_Standard_Deviation.getStandardDeviationDouble(numbers), EPSILON);
+		assertEquals(28.9, Day1_Standard_Deviation.getStandardDeviationBruteForce(numbers), EPSILON);
+		assertEquals(28.9, Day1_Standard_Deviation.getStandardDeviation(numbers), EPSILON);
 	}
 }
