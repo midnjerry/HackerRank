@@ -20,20 +20,23 @@ public class Project0009 {
 		// substituted a + b + c = N into a^2 + b^2 = c^2
 		// b = (2aN - N^2) / (-2N + 2a)
 
-		for (int a = 3; a < n / 2; a++) {
-
+		for (long a = n / 2; a >= 3; a--) {
 			long numerator = 2 * a * n - n * n;
 			long denominator = -2 * n + 2 * a;
 
-			if (numerator % denominator == 0) {
+			if (numerator % denominator == 0 && numerator != 0) {
 				long b = numerator / denominator;
 				long c = n - a - b;
-				result = a * b * c;
-				break;
+				if (a * a + b * b == c * c && a + b + c == n) {
+					long temp = a * b * c;
+
+					if (temp > result)
+						result = temp;
+					// System.out.println(a + ":" + b + ":" + c + ":" + n + ":"
+					// + temp);
+				}
 			}
 		}
-
 		return result;
 	}
-
 }

@@ -16,10 +16,11 @@ class ProjectTest0009 {
 		// 44, 117, 125
 
 		assertEquals(643500, Project0009.findProductOfPythagoreanTriplet(286));
-		assertEquals(780000000, Project0009.findProductOfPythagoreanTriplet(3000));
+		assertEquals(-1, Project0009.findProductOfPythagoreanTriplet(2999));
+		assertEquals(937500000, Project0009.findProductOfPythagoreanTriplet(3000));
 
 		for (int t = 1; t <= 3000; t++) {
-			Project0009.findProductOfPythagoreanTriplet(t);
+			System.out.println(Project0009.findProductOfPythagoreanTriplet(t));
 		}
 
 	}
