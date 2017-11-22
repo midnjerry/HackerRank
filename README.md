@@ -3,6 +3,7 @@
         <img height=85 src="https://d3keuzeb2crhkn.cloudfront.net/hackerrank/assets/styleguide/logo_wordmark-f5c5eb61ab0a154c3ed9eda24d0b9e31.svg">
     </a>
     <br>HackerRank and ProjectEuler solutions
+    <br>by Jerry Balderas
 </p>
 
 ## Project Euler
@@ -16,8 +17,16 @@
 | [Project Euler #6: Sum square difference](https://www.hackerrank.com/contests/projecteuler/challenges/euler006)                        |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0006.java)                                                   |
 | [Project Euler #7: 10001st prime](https://www.hackerrank.com/contests/projecteuler/challenges/euler007)                                |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0007.java)                                                   |
 | [Project Euler #8: Largest product in a series](https://www.hackerrank.com/contests/projecteuler/challenges/euler008)                  |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0008.java)                                                   |
+
 ## Algorithms
 
-| SubDomain |                                                          Challenge                                                         | Points |                                                                                          Solution                                                                             |
-|:---------:|:--------------------------------------------------------------------------------------------------------------------------:|:------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-|  Greedy   | [Fighting Pits](https://www.hackerrank.com/challenges/fighting-pits)                                                       |   80   | [Solution.java]()                |
+|       SubDomain        |                                                          Challenge                                                         | Points |                                                                                          Solution                                                                |
+|:----------------------:|:--------------------------------------------------------------------------------------------------------------------------:|:------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|  Dynamic Programming   | [The Coin Change Problem](https://www.hackerrank.com/challenges/coin-change/problem)                                       |   60   | [Solution.java](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/algorithms/dynamicProgramming/theCoinChangeProblem/Solution.java)                |
+|  Dynamic Programming   | [Equal](https://www.hackerrank.com/challenges/equal/problem)                                                               |   30   | [Solution.java](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/algorithms/dynamicProgramming/equal/Solution.java)                |
+|  Graph Theory          | [Roads and Libraries](https://www.hackerrank.com/challenges/torque-and-development/problem)                                |   30   | [Solution.java](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/algorithms/graphTheory/roadsAndLibraries/Solution.java)                |
+|  Greedy                | [Fighting Pits](https://www.hackerrank.com/challenges/fighting-pits)                                                       |   80   | [Solution.java](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/algorithms/greedy/fightingPits/Solution.java)                |
+|  Greedy                | [Sherlock and the Beast](https://www.hackerrank.com/challenges/sherlock-and-the-beast/problem)                             |   30   | [Solution.java]()                |
+
+https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/algorithms/graphTheory/evenTree/Solution.java
+
