@@ -37,4 +37,8 @@
 |:----------------------:|:--------------------------------------------------------------------------------------------------------------------------:|:------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |  Arrays                | [Array Manipulation](https://www.hackerrank.com/challenges/crush/problem)                                                  |   60   | [Solution.java](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/dataStructures/arrays/arrayManipulation/Solution.java) |
 
+## Ten Days of Statistics
+|                                                          Challenge                                                         | Points |                                                                                          Solution                                                                |
+|:--------------------------------------------------------------------------------------------------------------------------:|:------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| [Day 0: Mean, Median, and Mode](https://www.hackerrank.com/challenges/s10-basic-statistics/problem)                        |   30   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/tracks/statistics/Day0_Mean_Median_Mode.java) |
 
