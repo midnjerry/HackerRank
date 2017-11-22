@@ -17,26 +17,24 @@ public class Solution {
 			addChild(nodes, u, v);
 		}
 
-		System.out.println(getMaxCuts(nodes));
+		System.out.println(countEdgesToCut(nodes[1], n));
 
 		in.close();
 
 	}
 
-	private static int getMaxCuts(Node[] nodes) {
-		int result = 0;
-		countTreeSize(nodes[0]);
-		return result;
-	}
+	public static int countEdgesToCut(Node node, int originalSize) {
+		int count = 0;
 
-	public static int countTreeSize(Node node) {
-		int sum = 1;
-		
-		for (int i = 0; i < node.getChildren().size(); i++){
-			sum += countTreeSize(node.getChildren().get(i));
+		for (Node neighbor : node.getChildren()) {
+			count += countEdgesToCut(neighbor, originalSize);
 		}
-		
-		return sum;
+
+		if (node.size() < originalSize && node.size() % 2 == 0) {
+			count++;
+		}
+
+		return count;
 	}
 
 	public static void addChild(Node[] nodes, int child, int parent) {
@@ -50,22 +48,34 @@ public class Solution {
 		}
 		return nodes;
 	}
+
+
 }
 
 class Node {
-	private ArrayList<Node> child = new ArrayList<Node>();
+	private ArrayList<Node> children = new ArrayList<Node>();
 	private int mID;
 
 	public Node(int i) {
 		mID = i;
 	}
 
+	public int size() {
+		int size = 1;
+
+		for (Node child : children) {
+			size += child.size();
+		}
+
+		return size;
+	}
+
 	public void addChild(Node node) {
-		child.add(node);
+		children.add(node);
 	}
 
 	public ArrayList<Node> getChildren() {
-		return child;
+		return children;
 	}
 
 	public int getID() {
