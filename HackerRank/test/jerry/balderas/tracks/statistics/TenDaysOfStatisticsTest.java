@@ -1,5 +1,6 @@
 package jerry.balderas.tracks.statistics;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 import java.util.Arrays;
@@ -75,4 +76,24 @@ public class TenDaysOfStatisticsTest {
 		assertEquals(28.9, Day1_Standard_Deviation.getStandardDeviationBruteForce(numbers), EPSILON);
 		assertEquals(28.9, Day1_Standard_Deviation.getStandardDeviation(numbers), EPSILON);
 	}
+
+	@Test
+	public void TestQuartiles() {
+		int[] numbers = new int[] { 3, 7, 8, 5, 12, 14, 21, 13, 18 };
+		// 3, 5, 7, 8, |12| 13, 14, 18, 21
+		assertArrayEquals(new int[] { 6, 12, 16 }, Day1_Quartiles.getQuartiles(numbers));
+
+		numbers = new int[] { 5, 10, 40, 30, 50, 20, 70 };
+		assertArrayEquals(new int[] { 10, 30, 50 }, Day1_Quartiles.getQuartiles(numbers));
+
+		numbers = new int[] { 1, 2, 3 };
+		assertArrayEquals(new int[] { 1, 2, 3 }, Day1_Quartiles.getQuartiles(numbers));
+
+		numbers = new int[] { 3, 9, 10, 13, 19 };
+		assertArrayEquals(new int[] { 6, 10, 16 }, Day1_Quartiles.getQuartiles(numbers));
+
+		numbers = new int[] { 10, 20, 30, 40, 50, 60, 70, 80 };
+		assertArrayEquals(new int[] { 25, 45, 65 }, Day1_Quartiles.getQuartiles(numbers));
+	}
+
 }
