@@ -1,5 +1,8 @@
 package jerry.balderas.tracks.statistics;
 
+public class Day2_MultipleChoice {
+}
+
 /*
  * Question 1: Basic Probability
  * 
@@ -71,5 +74,4 @@ package jerry.balderas.tracks.statistics;
  *                                                    Sum: 204/504 = 17/42
  */
 
-public class Day2_MultipleChoice {
-}
+
