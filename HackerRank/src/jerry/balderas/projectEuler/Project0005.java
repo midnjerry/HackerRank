@@ -30,6 +30,7 @@ public class Project0005 {
 			int n = in.nextInt();
 			System.out.println(getMinimumProduct(n));
 		}
+		in.close();
 	}
 
 	static long getMinimumProduct(int n) {

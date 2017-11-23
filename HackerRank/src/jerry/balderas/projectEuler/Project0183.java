@@ -39,6 +39,7 @@ public class Project0183 {
 			int n = in.nextInt();
 			System.out.println(getSumDofN(n));
 		}
+		in.close();
 	}
 
 	static long getSumDofN(int n) {

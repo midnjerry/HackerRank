@@ -30,6 +30,7 @@ public class Project0007 {
 			int n = in.nextInt();
 			System.out.println(getPrime(n));
 		}
+		in.close();
 	}
 
 	static int getPrime(int n) {

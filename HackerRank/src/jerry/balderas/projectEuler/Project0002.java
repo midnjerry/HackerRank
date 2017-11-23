@@ -26,6 +26,7 @@ public class Project0002 {
 			long n = in.nextLong();
 			System.out.println(getEvenSum(n));
 		}
+		in.close();
 	}
 
 	static long getEvenSum(long n) {

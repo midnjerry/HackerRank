@@ -65,5 +65,6 @@ public class Solution {
 		
 		long ways = getWays(n, c, cache);
 		System.out.println(ways);
+		in.close();
 	}
 }

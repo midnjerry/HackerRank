@@ -11,6 +11,7 @@ public class Project0004 {
 			int n = in.nextInt();
 			System.out.println(getLargestPalindromeProductLessThan(n));
 		}
+		in.close();
 	}
 
 	static int getLargestPalindromeProductLessThan(int n) {

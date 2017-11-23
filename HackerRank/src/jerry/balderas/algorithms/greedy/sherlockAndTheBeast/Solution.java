@@ -42,5 +42,6 @@ public class Solution {
 		for (int i = 0; i < testCases; i++) {
 			System.out.println(getDecentNumber(in.nextInt()));
 		}
+		in.close();
 	}
 }

@@ -40,6 +40,7 @@ public class Project0001 {
 			int n = in.nextInt();
 			System.out.println(getSum(n));
 		}
+		in.close();
 	}
 
 }

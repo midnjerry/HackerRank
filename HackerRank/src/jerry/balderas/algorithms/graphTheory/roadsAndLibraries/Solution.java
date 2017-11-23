@@ -83,6 +83,6 @@ public class Solution {
 			}
 			System.out.println(getCost(n, nodes, costLibrary, costRoad));
 		}
-
+		in.close();
 	}
 }
