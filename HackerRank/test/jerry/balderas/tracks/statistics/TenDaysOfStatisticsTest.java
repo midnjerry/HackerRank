@@ -96,4 +96,34 @@ public class TenDaysOfStatisticsTest {
 		assertArrayEquals(new int[] { 25, 45, 65 }, Day1_Quartiles.getQuartiles(numbers));
 	}
 
+	@Test
+	public void TestCombinationFormula() {
+		// 5! / (5-2)!(2!)
+		assertEquals(10, Day4_BinomialDistributionI.getCombinations(5, 2));
+
+	}
+
+	@Test
+	public void TestBinomialDistribution() {
+		assertEquals(.696, Day4_BinomialDistributionI.findProbabilityforAtLeastThreeBoysOutOfSixBirths(1.09, 1.0),
+				.005);
+	}
+
+	@Test
+	public void TestBinomialDistribution2() {
+		assertEquals(.891, Day4_BinomialDistributionII.findProbabilityforAtMostXOutOfN(2, 10, .12), .005);
+		assertEquals(.342, Day4_BinomialDistributionII.findProbabilityforAtLeastXOutOfN(2, 10, .12), .005);
+
+	}
+
+	@Test
+	public void TestGeometricDistribution1() {
+		assertEquals(.066, Day4_GeometricDistributionI.getProbabilityOfXOnNthTrial(5, 1 / (double) 3), .005);
+	}
+
+	@Test
+	public void TestGeometricDistribution2() {
+		assertEquals(0.868, Day4_GeometricDistributionII.getProbabilityOfXByNthTrial(5, 1 / (double) 3), .005);
+	}
+
 }
