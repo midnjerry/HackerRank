@@ -20,6 +20,7 @@
 | [Project Euler #9: Special Pythagorean triplet](https://www.hackerrank.com/contests/projecteuler/challenges/euler009)                  |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0009.java)                                                   |
 | [Project Euler #10: Summation of primes](https://www.hackerrank.com/contests/projecteuler/challenges/euler010)                         |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0010.java)                                                   |
 | [Project Euler #11: Largest product in a grid](https://www.hackerrank.com/contests/projecteuler/challenges/euler011)                   |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0011.java)                                                   |
+| [Project Euler #12: Highly divisible triangular number](https://www.hackerrank.com/contests/projecteuler/challenges/euler012)          |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0012.java)                                                   |
 
 ## Algorithms
 
