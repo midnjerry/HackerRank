@@ -2,25 +2,32 @@ package jerry.balderas.projectEuler;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashSet;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Project0012 {
-	static int N = 100000;
-	static boolean[] isPrime = new boolean[N + 1];
+	static int P = 100000;
+	static int N = 1100;
+
+	static Long[] cache = new Long[N + 1];
+	static HashMap<Long, Integer> factorCache = new HashMap<Long, Integer>();
+	static int cacheTop = 1;
+	static boolean[] isPrime = new boolean[P + 1];
 	static ArrayList<Integer> primes = new ArrayList<Integer>();
 
 	static {
 		Arrays.fill(isPrime, true);
-		for (int i = 2; i <= N; i++) {
+		Arrays.fill(cache, null);
+		cache[0] = 1L;
+		for (int i = 2; i <= P; i++) {
 			if (isPrime[i]) {
-				for (long j = (long) i * i; j <= N; j += (long) i) {
+				for (long j = (long) i * i; j <= P; j += (long) i) {
 
 					isPrime[(int) j] = false;
 				}
 				primes.add(i);
-			}
 
+			}
 		}
 	}
 
@@ -33,74 +40,53 @@ public class Project0012 {
 			int n = in.nextInt();
 			System.out.println(getFirstTriangularNumberToHaveMoreThanNFactors(n));
 		}
+		in.close();
 	}
 
-	static long getFirstTriangularNumberToHaveMoreThanNFactorsBruteForce(int n) {
-		if (n == 0) {
-			return 1;
+	static int findNumFactors(long number) {
+
+		if (factorCache.containsKey(number)) {
+			return factorCache.get(number);
 		}
 
-		Long[] factors = new Long[0];
-		int t = 1;
-		long triangularSum = 0;
-		while (factors.length <= n) {
-			triangularSum = (t + 1) * t / 2;
-			factors = findFactors(triangularSum);
-			System.out.print(factors.length + " ");
-			t++;
-		}
-		return triangularSum;
-	}
-
-	static Long[] findFactors(long number) {
-		HashSet<Long> factors = new HashSet<Long>();
-		factors.add(1L);
-		factors.add(number);
-		int primeIndex = 1;
-		long prime = primes.get(primeIndex);
-		while (prime < number) {
-			primeIndex++;
-			long factor = 1;
-			while (number % prime == 0) {
-				factor *= prime;
-				factors.add(factor);
-				number /= prime;
-				factors.add(number);
+		int product = 1;
+		long num = number;
+		int i = 0;
+		Integer prime = primes.get(i);
+		while (prime <= num) {
+			int numPrimeFactors = 0;
+			while (num % prime == 0) {
+				numPrimeFactors++;
+				num /= prime;
 			}
-			prime = primes.get(primeIndex);
+			product *= (numPrimeFactors + 1);
+			prime = primes.get(++i);
 		}
+		factorCache.put(number, product);
 
-		Long[] result = factors.toArray(new Long[factors.size()]);
-		Arrays.sort(result);
-		return result;
+		return product;
 	}
 
 	static long getFirstTriangularNumberToHaveMoreThanNFactors(int n) {
 
-		if (n == 0) {
-			return 1;
+		if (cache[n] != null) {
+			return cache[n];
 		}
 
-		for (int i = 2; i <= 100000; i++) {
-			long triangularNum = (i + 1) * i / 2;
-			HashSet<Long> factors = new HashSet<Long>();
-			factors.add(1L);
-			factors.add(triangularNum);
-			long num = triangularNum;
-			for (int j = 2; j <= num; j++) {
-				long factor = 1;
-				while (num % j == 0) {
-					factor *= j;
-					factors.add(factor);
-					num = num / j;
-					factors.add(num);
-				}
-				if (factors.size() > n) {
-					return triangularNum;
-				}
-			}
+		long triangularNum = 1;
+		long i = 2;
+		int numFactors = 1;
+		while (numFactors <= n) {
+			triangularNum += i;
+			i++;
+			numFactors = findNumFactors(triangularNum);
 		}
-		return 0;
+
+		for (int j = n; j < numFactors && j <= 1000; j++) {
+			cache[j] = triangularNum;
+		}
+
+		return triangularNum;
 	}
 
 }
