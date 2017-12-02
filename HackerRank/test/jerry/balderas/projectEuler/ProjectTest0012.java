@@ -2,9 +2,9 @@ package jerry.balderas.projectEuler;
 
 import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class ProjectTest0012 {
+public class ProjectTest0012 {
 
 	@Test
 	void SampleTests() {

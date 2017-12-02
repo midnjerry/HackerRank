@@ -9,6 +9,7 @@ public class ProjectTest0008 {
 
 	@Before
 	public void setup() {
+
 	}
 
 	@Test

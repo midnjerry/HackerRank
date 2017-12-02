@@ -5,9 +5,10 @@ import static org.junit.Assert.assertEquals;
 import java.math.BigInteger;
 import java.util.ArrayList;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class ProjectTest0013 {
+
+public class ProjectTest0013 {
 
 	@Test
 	void SampleTests() {

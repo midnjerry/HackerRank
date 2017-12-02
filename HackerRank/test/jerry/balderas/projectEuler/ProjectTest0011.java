@@ -1,10 +1,10 @@
 package jerry.balderas.projectEuler;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class ProjectTest0011 {
+public class ProjectTest0011 {
 
 	@Test
 	void test() {

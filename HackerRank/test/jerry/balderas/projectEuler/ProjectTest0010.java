@@ -1,10 +1,10 @@
 package jerry.balderas.projectEuler;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-class ProjectTest0010 {
+public class ProjectTest0010 {
 
 	// 1 << N << 1000000
 
