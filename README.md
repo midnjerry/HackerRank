@@ -29,6 +29,9 @@
 | [Project Euler #18: Maximum path sum I](https://www.hackerrank.com/contests/projecteuler/challenges/euler018)                          |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0018.java)                                                   |
 | [Project Euler #19: Counting Sundays](https://www.hackerrank.com/contests/projecteuler/challenges/euler019)                            |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0019.java)                                                   |
 | [Project Euler #20: Factorial digit sum](https://www.hackerrank.com/contests/projecteuler/challenges/euler020)                         |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0020.java)                                                   |
+| [Project Euler #21: Amicable numbers](https://www.hackerrank.com/contests/projecteuler/challenges/euler021)                            |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0021.java)                                                   |
+| [Project Euler #22: Names scores](https://www.hackerrank.com/contests/projecteuler/challenges/euler022)                                |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0022.java)                                                   |
+| [Project Euler #23: Non-abundant sums](https://www.hackerrank.com/contests/projecteuler/challenges/euler023)                           |  100   | [Solution](https://github.com/midnjerry/HackerRank/blob/master/HackerRank/src/jerry/balderas/projectEuler/Project0023.java)                                                   |
 
 ## Algorithms
 
