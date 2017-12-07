@@ -10,7 +10,7 @@ public class ProjectTest0009 {
 	// 1 << N << 3000
 
 	@Test
-	void test() {
+	public void test() {
 		assertEquals(60, Project0009.findProductOfPythagoreanTriplet(12));
 		assertEquals(-1, Project0009.findProductOfPythagoreanTriplet(4));
 		// 44, 117, 125

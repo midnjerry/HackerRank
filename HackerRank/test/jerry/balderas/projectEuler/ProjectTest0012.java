@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ProjectTest0012 {
 
 	@Test
-	void SampleTests() {
+	public void SampleTests() {
 		assertEquals(1, Project0012.getFirstTriangularNumberToHaveMoreThanNFactors(0));
 		assertEquals(3, Project0012.getFirstTriangularNumberToHaveMoreThanNFactors(1));
 		assertEquals(6, Project0012.getFirstTriangularNumberToHaveMoreThanNFactors(2));

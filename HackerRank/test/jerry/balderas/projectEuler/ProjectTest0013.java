@@ -11,7 +11,7 @@ import org.junit.Test;
 public class ProjectTest0013 {
 
 	@Test
-	void SampleTests() {
+	public void SampleTests() {
 		ArrayList<BigInteger> numberList = new ArrayList<BigInteger>();
 
 		numberList.add(new BigInteger("37107287533902102798797998220837590246510135740250"));

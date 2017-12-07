@@ -9,7 +9,7 @@ public class ProjectTest0010 {
 	// 1 << N << 1000000
 
 	@Test
-	void test() {
+	public void test() {
 		assertEquals(0, Project0010.getPrimeSumLessThan(1));
 		assertEquals(10, Project0010.getPrimeSumLessThan(5));
 		assertEquals(17, Project0010.getPrimeSumLessThan(10));

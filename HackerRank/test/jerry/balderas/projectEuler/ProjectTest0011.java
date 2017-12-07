@@ -7,7 +7,7 @@ import org.junit.Test;
 public class ProjectTest0011 {
 
 	@Test
-	void test() {
+	public void test() {
 		int n = 5;
 		int[][] matrix = new int[n][];
 
